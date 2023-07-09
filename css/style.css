@@ -1,0 +1,58 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(
+        60deg, #df223b, #f1a96e
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+
+.gallery {
+    display: flex;
+    left: calc(50% - 330px);
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 360px;
+    transition:1s ease-in-out;
+    border-radius: 30px;
+}
+
+.card img {
+    width: 200px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card:not(:first-child) {
+    margin-left: -80px;
+}
+
+.card:hover {
+    transform: translateY(-60px) scale(1.1);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.card:hover ~ .card {
+    left: 75px;
+    transform: translateX(45px);
+    transition:1s ease-in-out;
+}
+
+
